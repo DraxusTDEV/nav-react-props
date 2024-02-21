@@ -1,13 +1,9 @@
-const Nav = () => {
-  const styles = {
-    width: "100%",
-    height: "70px",
-    backgroundColor: "black",
-    color: "white",
-  };
+const Nav = ({ ...props }) => {
+  const [{ color, height, backgroundColor, width, fontSize }] = [{ ...props }];
+
   return (
     <div>
-      <nav style={styles}>Nav</nav>
+      <nav style={{ color, height, backgroundColor, width, fontSize }}>Nav</nav>
     </div>
   );
 };
